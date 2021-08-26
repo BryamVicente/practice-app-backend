@@ -23,11 +23,22 @@ ActiveRecord::Schema.define(version: 2021_08_26_205632) do
   end
 
   create_table "doctors", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "age"
+    t.string "image"
+    t.text "description"
+    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "patients", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "age"
+    t.string "image"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
